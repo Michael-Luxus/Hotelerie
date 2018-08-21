@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StartupFoodtech</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--bootstr ───────────────────────────────────────-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--font ───────────────────────────────────────-->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <!--end ───────────────────────────────────────-->
+
+    <script>
+
+      $(document).ready(function(){
+        $("#hide").click(function(){
+          $(".menu, .plats").hide();
+          $(".presentation").show();
+        });
+      });
+
+      $(document).ready(function(){
+        $("#show").click(function(){
+          $(".presentation, .plats").hide();
+          $(".menu").show();
+        });
+      });
+
+      $(document).ready(function(){
+        $("#high").click(function(){
+          $(".presentation, .menu").hide();
+          $(".plats").show();
+        });
+      });
+
+
+
+
+
+    </script>
+
+
+  </head>
+
+
+
+
+
+
+
+
+
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
